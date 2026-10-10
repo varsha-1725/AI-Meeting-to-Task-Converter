@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Tasks | TaskFlow AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main-content meeting-page">
+
+        <a href="index.html" class="back-link">← Back to Dashboard</a>
+
+        <header class="meeting-header">
+            <h1>Generated Tasks</h1>
+            <p>Review the action items identified from your meeting.</p>
+        </header>
+
+        <section class="content-card">
+            <h2>Meeting Summary</h2>
+            <p id="summary">
+                The team discussed homepage design, presentation preparation,
+                and testing the meeting upload page.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <div class="tasks-heading">
+                <div>
+                    <h2>Action Items</h2>
+                    <p>Review your tasks and mark them as complete.</p>
+                </div>
+                <span id="taskCount" class="task-count">3 Tasks</span>
+            </div>
+            <button id="addTaskBtn" class="add-task-btn">
+    + Add New Task
+</button>
+<div id="addTaskForm" class="add-task-form" style="display: none;">
+    <h3>Add New Task</h3>
+
+    <input type="text" id="newTaskTitle" placeholder="Enter task title">
+    <input type="text" id="newTaskAssignee" placeholder="Assigned to">
+    <input type="date" id="newTaskDeadline">
+
+    <select id="newTaskPriority">
+        <option value="High">High Priority</option>
+        <option value="Medium" selected>Medium Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
+
+    <button id="saveNewTaskBtn">Save Task</button>
+    <button id="cancelNewTaskBtn">Cancel</button>
+</div>
+
+            
+
+<div id="generatedTasks">
+
+    <article class="generated-task">
+        <input type="checkbox" class="task-check">
+
+        <div class="generated-task-info">
+            <h3 class="task-title">Complete homepage design</h3>
+            <p>Assigned to: <span class="task-assignee">Rahul</span></p>
+            <p>Deadline: <span class="task-deadline">Friday</span></p>
+        </div>
+
+        <span class="priority high task-priority">High</span>
+
+        <div class="task-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </div>
+    </article>
+
+    <article class="generated-task">
+        <input type="checkbox" class="task-check">
+
+        <div class="generated-task-info">
+            <h3 class="task-title">Prepare project presentation</h3>
+            <p>Assigned to: <span class="task-assignee">Priya</span></p>
+            <p>Deadline: <span class="task-deadline">Monday</span></p>
+        </div>
+
+        <span class="priority medium task-priority">Medium</span>
+
+        <div class="task-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </div>
+    </article>
+
+    <article class="generated-task">
+        <input type="checkbox" class="task-check">
+
+        <div class="generated-task-info">
+            <h3 class="task-title">Test meeting upload page</h3>
+            <p>Assigned to: <span class="task-assignee">Aman</span></p>
+            <p>Deadline: <span class="task-deadline">Not specified</span></p>
+        </div>
+
+        <span class="priority low task-priority">Low</span>
+
+        <div class="task-actions">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </div>
+    </article>
+
+</div>
+
+                
+
+            </div>
+
+            <button id="saveTasksBtn" class="process-btn">
+                Save Tasks
+            </button>
+
+            <p id="taskMessage" class="message" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <script src="tasks.js"></script>
+</body>
+</html>

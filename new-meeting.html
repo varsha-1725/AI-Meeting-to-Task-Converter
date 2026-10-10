@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Meeting | TaskFlow AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main-content meeting-page">
+
+        <a href="index.html" class="back-link">← Back to Dashboard</a>
+
+        <header class="meeting-header">
+            <h1>New Meeting</h1>
+            <p>Upload your meeting recording or paste its transcript.</p>
+        </header>
+
+        <section class="content-card">
+            <h2>Choose your input method</h2>
+
+            <div class="input-options">
+                <button id="audioTab" class="input-tab active-tab">
+                    🎙 Upload Audio
+                </button>
+
+                <button id="transcriptTab" class="input-tab">
+                    📝 Paste Transcript
+                </button>
+            </div>
+
+            <div id="audioSection" class="input-section">
+                <h3>Upload Meeting Recording</h3>
+                <p>Select an audio file from your computer.</p>
+
+                <label for="audioFile" class="upload-box">
+                    <span class="upload-icon">⬆</span>
+                    <strong>Click to select an audio file</strong>
+                    <span>MP3, WAV, or M4A</span>
+                </label>
+
+                <input
+                    type="file"
+                    id="audioFile"
+                    accept="audio/*"
+                    hidden
+                >
+
+                <p id="fileName" class="file-name">
+                    No file selected
+                </p>
+            </div>
+
+            <div id="transcriptSection" class="input-section" hidden>
+                <h3>Meeting Transcript</h3>
+                <p>Paste the text or conversation from your meeting below.</p>
+
+                <textarea
+                    id="transcript"
+                    placeholder="Example: Rahul will complete the homepage by Friday. Priya will prepare the presentation..."
+                    rows="8"
+                ></textarea>
+            </div>
+
+            <button id="processBtn" class="process-btn">
+                Generate Tasks →
+            </button>
+
+            <p id="message" class="message" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <script src="meeting.js"></script>
+</body>
+</html>

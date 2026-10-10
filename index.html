@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meeting to Task Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        
+<aside class="sidebar">
+    <h2>✦ TaskFlow AI</h2>
+
+    <nav>
+        <a href="#" class="active">⌂ Dashboard</a>
+        <a href="#meetings">▣ My Meetings</a>
+        <a href="#tasks">☑ My Tasks</a>
+    </nav>
+</aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Turn your meetings into actionable tasks.</p>
+                </div>
+
+                <button id="newMeetingBtn">+ New Meeting</button>
+            </header>
+
+           
+<!-- Statistics -->
+<section class="stats">
+
+    <div class="stat-card meetings-card">
+        <div class="stat-icon">📅</div>
+        <div>
+            <p>Total Meetings</p>
+            <h2 id="totalMeetings">12</h2>
+            <span class="stat-note">Your meeting history</span>
+        </div>
+    </div>
+
+    <div class="stat-card pending-card">
+        <div class="stat-icon">☑️</div>
+        <div>
+            <p>Pending Tasks</p>
+            <h2 id="pendingTasks">8</h2>
+            <span class="stat-note">Tasks left to complete</span>
+        </div>
+    </div>
+
+    <div class="stat-card completed-card">
+        <div class="stat-icon">✓</div>
+        <div>
+            <p>Completed Tasks</p>
+            <h2 id="completedTasks">15</h2>
+            <span class="stat-note">Great progress!</span>
+        </div>
+    </div>
+
+</section>
+
+
+            <!-- Tasks Section -->
+            <section class="content-card" id="tasks">
+                <h2>Recent Tasks</h2>
+
+                <div class="task">
+                    <input type="checkbox">
+                    <div>
+                        <h3>Complete homepage design</h3>
+                        <p>Assigned to: Rahul</p>
+                    </div>
+                    <span class="priority high">High</span>
+                </div>
+
+                <div class="task">
+                    <input type="checkbox">
+                    <div>
+                        <h3>Prepare project presentation</h3>
+                        <p>Assigned to: Priya</p>
+                    </div>
+                    <span class="priority medium">Medium</span>
+                </div>
+
+                <div class="task">
+                    <input type="checkbox">
+                    <div>
+                        <h3>Test the meeting upload page</h3>
+                        <p>Assigned to: Aman</p>
+                    </div>
+                    <span class="priority low">Low</span>
+                </div>
+            </section>
+
+            <!-- Meetings Section -->
+            <section class="content-card" id="meetings">
+                <h2>Recent Meetings</h2>
+
+                <div class="meeting">
+                    <div>
+                        <h3>Weekly Team Meeting</h3>
+                        <p>5 tasks generated</p>
+                    </div>
+                    <span>Today</span>
+                </div>
+
+                <div class="meeting">
+                    <div>
+                        <h3>Project Planning</h3>
+                        <p>3 tasks generated</p>
+                    </div>
+                    <span>Yesterday</span>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
